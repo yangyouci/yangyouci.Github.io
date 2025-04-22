@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=device-width,initial-scale=1.0">
+    <title>待辦事項列表</title>
+</head>
+<body>
+<h1>我的代辦事項</h1>
+<input type="text" id="todoInput">
+<button id="cc">新增</button>
+<ul id="todoList"></ul>
+<ul id="list">
+
+</ul>
+<script type="text/javascript">
+    document.getElementById("cc").addEventListener("click",yyy);
+
+    function yyy(){
+
+    var todo =document.getElementById("todoInput").value;
+    document.getElementById("todoInput").value="";
+    var li=document.createElement("li")
+        li.textContent=todo;
+    const deleteButten=document.createElement("button");
+    deleteButten.textContent="刪除";
+    deleteButten.onclick=function (){
+    li.remove();
+    };
+    li.appendChild(deleteButten);
+    document.getElementById("todoList").appendChild(li);
+    }
+
+
+</script>
+</body>
+</html>
+
+</body>
+</html>
